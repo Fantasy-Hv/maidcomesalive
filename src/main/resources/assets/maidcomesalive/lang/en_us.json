@@ -1,0 +1,13 @@
+{
+  "itemGroup.maidcomesalive": "Example Mod Tab",
+  "block.maidcomesalive.example_block": "Example Block",
+  "item.maidcomesalive.example_item": "Example Item",
+
+  "maidcomesalive.configuration.title": "Maid Comes Alive Configs",
+  "maidcomesalive.configuration.section.maidcomesalive.common.toml": "Maid Comes Alive Configs",
+  "maidcomesalive.configuration.section.maidcomesalive.common.toml.title": "Maid Comes Alive Configs",
+  "maidcomesalive.configuration.items": "Item List",
+  "maidcomesalive.configuration.logDirtBlock": "Log Dirt Block",
+  "maidcomesalive.configuration.magicNumberIntroduction": "Magic Number Text",
+  "maidcomesalive.configuration.magicNumber": "Magic Number"
+}
