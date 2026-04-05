@@ -1,5 +1,6 @@
 package org.yian.madicomesalive;
 
+import net.neoforged.neoforge.event.entity.living.AnimalTameEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +31,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import org.yian.madicomesalive.listener.AnimationRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MaidComesAlive.MODID)
@@ -50,9 +52,6 @@ public class MaidComesAlive {
         // Note that this is necessary if and only if we want *this* class (MaidComesAlive) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
-
-//        // Register the item to a creative tab
-//        modEventBus.addListener(this::addCreative);
 
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
