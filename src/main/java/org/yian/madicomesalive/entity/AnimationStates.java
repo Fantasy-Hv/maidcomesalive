@@ -5,7 +5,6 @@ import com.github.tartaricacid.touhoulittlemaid.client.animation.gecko.Animation
 import com.github.tartaricacid.touhoulittlemaid.client.animation.gecko.Priority;
 import com.github.tartaricacid.touhoulittlemaid.entity.task.TaskIdle;
 import com.github.tartaricacid.touhoulittlemaid.geckolib3.core.builder.ILoopType;
-import org.yian.madicomesalive.MaidComesAliveClient;
 import org.yian.madicomesalive.utils.PredictUtils;
 
 import java.util.*;
@@ -14,7 +13,7 @@ public class AnimationStates {
     public static List<AnimationState> animations = new ArrayList<>();
     private static final Random random = new Random();
     static {
-        //当女仆休闲时有概率播放卖萌动画
+        //当女仆休闲(并且高兴/好感度高等，可联动情绪萌动模组，_todo )时有概率播放卖萌动画
         AnimationState cuteAnimation = new AnimationState(
                 "cute",
                 ILoopType.EDefaultLoopTypes.LOOP,
@@ -25,14 +24,12 @@ public class AnimationStates {
                             !iMaid.isMaidInSittingPose(),
                             animationEvent.isMoving()
                     );
-
                     if (!checkMovement)return false;
                     IMaidTask task = iMaid.getTask();
                     boolean checkTask = PredictUtils.assertAll(
                             task instanceof TaskIdle
                     );
                     if (!checkTask)return false;
-//                    MaidComesAliveClient.LOGGER.info("do action");
                     return random.nextBoolean();
                 }
         );

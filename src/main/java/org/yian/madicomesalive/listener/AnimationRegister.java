@@ -13,6 +13,7 @@ import net.minecraft.util.profiling.ProfilerFiller;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.event.RegisterClientReloadListenersEvent;
+import org.codehaus.plexus.util.CollectionUtils;
 import org.yian.madicomesalive.MaidComesAlive;
 import org.yian.madicomesalive.MaidComesAliveClient;
 import org.yian.madicomesalive.entity.AnimationStates;
@@ -31,33 +32,7 @@ public class AnimationRegister extends SimplePreparableReloadListener<Void> {
     //DefaultGeckoAnimationEvent event
     @SubscribeEvent(priority = EventPriority.HIGHEST)
     public static void onGeckoAnimationEvent (DefaultGeckoAnimationEvent event) {
-            MaidComesAliveClient.LOGGER.error("捕获默认动画文件加载事件");
-            MaidComesAliveClient.LOGGER.error("捕获默认动画文件加载事件");
-            MaidComesAliveClient.LOGGER.error("捕获默认动画文件加载事件");
-//            new Thread(
-//                    ()->{
-//
-//                    }
-//            ).start();
-//        try {
-//            Thread.sleep(4000);
-            // 从资源管理器读取
-//            InputStream animationJsonFileStream = Minecraft.getInstance()
-//                    .getResourceManager()
-//                    .getResource(MAID_DEFAULT_ANIME_LOC)
-//                    .orElseThrow(() -> new RuntimeException("找不到动画文件：" + MAID_DEFAULT_ANIME_LOC))
-//                    .open();
-//            AnimationFile file = AnimationDataMapper.getAnimationFile(animationJsonFileStream);
-//            MaidComesAliveClient.LOGGER.info("read animation: {}\n", file.animations());
-//            MaidComesAliveClient.LOGGER.info("originnal animations :{}",GeckoModelLoader.DEFAULT_MAID_ANIMATION_FILE.animations());
-//            animationJsonFileStream.close();
-//            animationJsonFileStream = Minecraft.getInstance()
-//                    .getResourceManager()
-//                    .getResource(MAID_DEFAULT_ANIME_LOC)
-//                    .orElseThrow(() -> new RuntimeException("找不到动画文件：" + MAID_DEFAULT_ANIME_LOC))
-//                    .open();
-//            GeckoModelLoader.mergeAnimationFile(animationJsonFileStream, GeckoModelLoader.DEFAULT_MAID_ANIMATION_FILE);
-//            animationJsonFileStream.close();
+
             event.addAnimation(DefaultGeckoAnimationEvent.AnimationType.MAID,MAID_DEFAULT_ANIME_LOC);
             MaidComesAliveClient.LOGGER.error("成功加载动画：" + MAID_DEFAULT_ANIME_LOC);
 //            registerAnimationStates();
@@ -85,8 +60,7 @@ public class AnimationRegister extends SimplePreparableReloadListener<Void> {
                     .open();
                 Map<ResourceLocation, AnimationFile> allAnimations =
                         GeckoLibCache.getInstance().getAnimations();
-                if (allAnimations.isEmpty())
-                    return;
+                if (allAnimations==null||allAnimations.isEmpty())return;
                 AnimationFile animationFile = AnimationDataUtils.getAnimationFile(animationJsonFileStream);
                 for(ResourceLocation location: allAnimations.keySet()){
                     if (location.getPath().contains("wine")) {
