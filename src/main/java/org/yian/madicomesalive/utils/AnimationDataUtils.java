@@ -18,7 +18,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Map;
 // copy from com.github.tartaricacid.touhoulittlemaid.client.resource.GeckoModelLoader
 public class AnimationDataUtils {
-    public static AnimationFile getAnimationFile(InputStream stream) {
+    public static AnimationFile getAnimationFileObj(InputStream stream) {
         AnimationFile animationFile = new AnimationFile();
         MolangParser parser = GeckoLibCache.getInstance().parser;
         JsonObject jsonObject = GsonHelper.fromJson(CustomPackLoader.GSON, new InputStreamReader(stream, StandardCharsets.UTF_8), JsonObject.class);

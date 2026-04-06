@@ -18,11 +18,9 @@ public class Config {
     public static final ModConfigSpec.IntValue MAGIC_NUMBER = BUILDER
             .comment("A magic number")
             .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
-
-    public static final ModConfigSpec.ConfigValue<String> MAGIC_NUMBER_INTRODUCTION = BUILDER
-            .comment("What you want the introduction message to be for the magic number")
-            .define("magicNumberIntroduction", "The magic number is... ");
-
+    public static final ModConfigSpec.IntValue ANIMATION_COOLDOWN = BUILDER
+            .comment("动画的冷却时间（s），可以避免酒狐动作过于频繁")
+            .defineInRange("animation_cooldown",10,0,Integer.MAX_VALUE);
     // a list of strings that are treated as resource locations for items
     public static final ModConfigSpec.ConfigValue<List<? extends String>> ITEM_STRINGS = BUILDER
             .comment("A list of items to log on common setup.")
