@@ -38,8 +38,6 @@ blush_fidget - 不安地扭动身体
 
 **困倦时**
 
-yawn_stretch - 打哈欠伸懒腰
-
 rub_eyes - 揉眼睛
 
 sleepy_wobble - 站不稳摇晃
@@ -69,8 +67,6 @@ thunder_scared - 雷声时害怕地抱住自己
 
 morning_greet - 清晨向主人挥手问好
 
-sunset_watch - 黄昏时眺望远方
-
 night_yawn - 夜晚打哈欠
 
 **地形相关**
@@ -87,7 +83,7 @@ leaf_kick - 走过草地时踢落叶
 
 **对主人**
 
-wave_greeting - 看到主人时挥手
+wave_greeting - 看到主人时挥手（已实现）
 
 follow_close - 紧跟时的轻快步伐
 
@@ -154,9 +150,7 @@ cry_for_help - 求助动作
 
 eat_delicious - 吃到美食时的幸福表情
 
-drink_tea - 优雅喝茶
-
-read_book - 看书时的专注姿态
+drink_tea - 优雅喝茶？？
 
 
 ### 节日/彩蛋类动画
@@ -165,6 +159,8 @@ birthday_celebrate - 生日庆祝（检测玩家生日）
 new_year_bow - 新年鞠躬
 。。。
 ## 实现方案
+### 配置方案
+需要给用户提供动画逻辑的开关
 ### 资源加载
 女仆的动画是要女仆的模型一致，脱离模型的孤立动作会出现表现兼容性问题。目前项目采用将geckolib动画合并到模组原有geckolib模型动画中的方案，只是试验性地设计了大正女仆酒狐的动作并硬编码添加到酒狐的动作列表中，灵活性较差。
 
