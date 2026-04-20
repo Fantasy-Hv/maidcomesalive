@@ -1,4 +1,4 @@
-package org.yian.madicomesalive.behavior;
+package org.yian.madicomesalive.ai.registry;
 
 import com.github.tartaricacid.touhoulittlemaid.api.entity.ai.IExtraMaidBrain;
 import com.github.tartaricacid.touhoulittlemaid.entity.passive.EntityMaid;
@@ -8,9 +8,7 @@ import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.ai.sensing.Sensor;
 import net.minecraft.world.entity.ai.sensing.SensorType;
 import org.yian.madicomesalive.MaidComesAlive;
-import org.yian.madicomesalive.behavior.greeting.GreetBehavior;
-import org.yian.madicomesalive.behavior.greeting.GreetSensor;
-import org.yian.madicomesalive.memory.Memories;
+import org.yian.madicomesalive.ai.behavior.GreetBehavior;
 
 import java.util.Collections;
 import java.util.List;

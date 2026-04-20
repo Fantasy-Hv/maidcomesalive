@@ -1,9 +1,6 @@
 package org.yian.madicomesalive;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.entity.ai.sensing.Sensor;
-import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -12,11 +9,10 @@ import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
-import org.yian.madicomesalive.behavior.Sensors;
-import org.yian.madicomesalive.memory.Memories;
-import org.yian.madicomesalive.data.client.attachment.AttachmentRegister;
+import org.yian.madicomesalive.ai.registry.Sensors;
+import org.yian.madicomesalive.ai.registry.Memories;
+import org.yian.madicomesalive.network.attachment.AttachmentRegister;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MaidComesAlive.MODID)

@@ -49,7 +49,6 @@ public class AnimationRegister {
                         AnimationDataUtils.mergeAnimationFile(allAnimations.get(location),animationFile);
                         MaidComesAlive.LOGGER.info("成功将动画合并入模型：" + location);
                     }
-
                 }
             registerAnimationStates();
             animationJsonFileStream.close();

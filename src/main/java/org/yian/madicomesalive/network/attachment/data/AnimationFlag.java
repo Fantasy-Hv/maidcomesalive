@@ -1,4 +1,4 @@
-package org.yian.madicomesalive.data.client.attachment;
+package org.yian.madicomesalive.network.attachment.data;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.network.codec.ByteBufCodecs;
@@ -6,7 +6,7 @@ import net.minecraft.network.codec.StreamCodec;
 
 import java.util.HashSet;
 import java.util.Set;
-// 存储状态，并维护转移
+// 存储状态,作为客户端控制动画的判据
 public class AnimationFlag {
     private Set<Integer> flags;
     public AnimationFlag(){
@@ -36,21 +36,4 @@ public class AnimationFlag {
                     }
             );
 
-    /**
-     *
-     * @param cur_near 1表示主人在附近，0表示不在附近
-     */
-    public void updateGreetingState(boolean cur_near){
-        if (cur_near){
-            if (flags.contains(AnimateConstants.CURRENT_MASTER_NEAR_FLAG))return;
-            else { // 由不在变为在，设置打招呼
-                flags.add(AnimateConstants.CURRENT_MASTER_NEAR_FLAG);
-                flags.add(AnimateConstants.GREETING_DIRTY);
-            }
-        }else { // 主人离开了，清除状态位
-            flags.remove(AnimateConstants.CURRENT_MASTER_NEAR_FLAG);
-            flags.remove(AnimateConstants.GREETING_DIRTY);
-        }
-
-    }
 }

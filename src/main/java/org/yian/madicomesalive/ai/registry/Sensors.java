@@ -1,10 +1,10 @@
-package org.yian.madicomesalive.behavior;
+package org.yian.madicomesalive.ai.registry;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.entity.ai.sensing.SensorType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.yian.madicomesalive.MaidComesAlive;
-import org.yian.madicomesalive.behavior.greeting.GreetSensor;
+import org.yian.madicomesalive.ai.sensor.GreetSensor;
 
 import java.util.function.Supplier;
 

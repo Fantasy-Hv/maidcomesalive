@@ -18,7 +18,7 @@ public class Config {
     public static final ModConfigSpec.IntValue MAGIC_NUMBER = BUILDER
             .comment("A magic number")
             .defineInRange("magicNumber", 42, 0, Integer.MAX_VALUE);
-    public static final ModConfigSpec.IntValue ANIMATION_COOLDOWN = BUILDER
+    public static final ModConfigSpec.IntValue ANIMATION_CUTE_COOLDOWN = BUILDER
             .comment("动画的冷却时间（s），可以避免酒狐动作过于频繁")
             .defineInRange("animation_cooldown",10,0,Integer.MAX_VALUE);
     // a list of strings that are treated as resource locations for items

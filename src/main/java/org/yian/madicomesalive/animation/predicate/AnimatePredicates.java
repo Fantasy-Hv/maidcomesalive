@@ -2,7 +2,7 @@ package org.yian.madicomesalive.animation.predicate;
 
 import com.github.tartaricacid.touhoulittlemaid.api.entity.IMaid;
 import org.yian.madicomesalive.data.client.attachment.AnimateConstants;
-import org.yian.madicomesalive.data.client.attachment.AttachmentRegister;
+import org.yian.madicomesalive.network.attachment.AttachmentRegister;
 
 import java.util.Set;
 

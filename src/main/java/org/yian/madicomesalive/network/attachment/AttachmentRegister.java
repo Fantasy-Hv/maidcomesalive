@@ -1,9 +1,10 @@
-package org.yian.madicomesalive.data.client.attachment;
+package org.yian.madicomesalive.network.attachment;
 
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import org.yian.madicomesalive.MaidComesAlive;
+import org.yian.madicomesalive.network.attachment.data.AnimationFlag;
 
 import java.util.HashMap;
 import java.util.function.Supplier;
