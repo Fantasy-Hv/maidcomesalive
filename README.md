@@ -1,2 +1,2 @@
 # maid-comes-alive
-旨在让车万女仆模组的女仆拥有更多场景下生动的动画表现。
+旨在丰富Touhoulittlemaid模组女仆在更多场景下的动画表现。
